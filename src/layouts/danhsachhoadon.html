@@ -1,0 +1,113 @@
+{{#extend "default"}} {{#content "main"}}
+<br>
+<div class="container-fluid container-fixed-lg">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="page-title">{{title}}
+            </h3>
+
+        </div>
+    </div>
+
+    <div class="row">
+        {{>formSearch type="danhsachhoadon"}}
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalTaoMoiHoaDon"><i class="fa fa-file"></i> Tạo mới hoá đơn</button>
+                <button type="button" class="btn btn-default text-primary" data-toggle="modal" data-target="#modalHoaDonTong"><i class="fa fa-list-alt"></i> Gộp hoá đơn </button>
+                <div class="pull-right m-b-10">
+                    <span class="pull-left m-t-10 m-r-5"><b>1 - 100</b> trong tổng số <b>1412</b></span>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
+                        <button type="button" class="btn btn-default"><i class="fa fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px;padding: 10px 11px !important;">
+                                    <div class="checkbox ">
+                                        <input type="checkbox" value="3" id="checkbox1">
+                                        <label for="checkbox1" class="m-r-0"></label>
+                                    </div>
+                                </th>
+                                <th>STT</th>
+                                <th>Số chứng thư</th>
+                                <th>Tên khách hàng</th>
+                                <th>Hạng mục giám định</th>
+                                <th>Ngày yêu cầu</th>
+                                <th>Ngày hoàn thành</th>
+                                <th>Địa điểm</th>
+                                <th>Trạng thái</th>
+                                <th>Chi tiết</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="v-align-middle">
+                                    <div class="checkbox ">
+                                        <input type="checkbox" value="1" id="checkbox2">
+                                        <label for="checkbox2" class="m-r-0"></label>
+                                    </div>
+                                </td>
+                                <td class="v-align-middle">1</td>
+                                <td class="v-align-middle">6532</td>
+                                <td class="v-align-middle">Nguyễn Văn A</td>
+                                <td class="v-align-middle">Giám định chất lượng</td>
+                                <td class="v-align-middle">20/05/2016</td>
+                                <td class="v-align-middle">20/06/2016</td>
+                                <td class="v-align-middle">Vũng Tàu</td>
+                                <td class="v-align-middle"><span class="label label-danger">Chưa tạo</span></td>
+                                <td class="v-align-middle">
+                                    <a href="" class="text-primary" data-toggle="modal" data-target="#modalHoaDonKhachHang-ChiTiet"><i class="fa fa-info-circle"></i> Xem</a>
+                                </td>
+                                <td class="v-align-middle">
+                                    <div class="btn-group sm-m-t-10">
+                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalTaoMoiHoaDon"><i class="fa fa-file"></i> Tạo mới hoá đơn</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="v-align-middle">
+                                    <div class="checkbox ">
+                                        <input type="checkbox" value="2" id="checkbox3">
+                                        <label for="checkbox3" class="m-r-0"></label>
+                                    </div>
+                                </td>
+                                <td class="v-align-middle">2</td>
+                                <td class="v-align-middle">456532</td>
+                                <td class="v-align-middle">Nguyễn Văn B</td>
+                                <td class="v-align-middle">Giám định số lượng</td>
+                                <td class="v-align-middle">20/05/2016</td>
+                                <td class="v-align-middle">20/06/2016</td>
+                                <td class="v-align-middle">Nha Trang</td>
+                                <td class="v-align-middle"><span class="label label-primary">Đã tạo</span></td>
+                                <td class="v-align-middle">
+                                    <a href="" class="text-primary" data-toggle="modal" data-target="#modalHoaDonKhachHang-ChiTiet"><i class="fa fa-info-circle"></i> Xem</a>
+                                </td>
+                                <td class="v-align-middle">
+                                    <div class="btn-group sm-m-t-10">
+                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalXuatInvoicesNhap"><i class="fa fa-edit"></i> Xuất hoá đơn</button>
+                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaHoaDon"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                        <button type="button" class="btn btn-default btn-sm text-danger" data-toggle="modal" data-target="#modalXoa"><i class="fa fa-trash-o"></i> Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    {{>pagination}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/content}} {{#content "script" mode="append"}} {{/content}} {{/extend}}

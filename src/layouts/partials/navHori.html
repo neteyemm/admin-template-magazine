@@ -1,0 +1,35 @@
+{{#ifEqual type "normal"}}
+<div class="bar">
+    <div class="pull-right">
+        <a href="#" class="text-black padding-10 visible-xs-inline visible-sm-inline pull-right m-t-10 m-b-10 m-r-10 on" data-pages="horizontal-menu-toggle">
+            <i class=" pg-close_line"></i>
+        </a>
+    </div>
+    <div class="bar-inner">
+        <ul>
+
+            
+
+            <li class="{{#ifEqual path.name 'trangmau1'}} active {{/ifEqual}}">
+                <a href="trangmau1.html">
+                    <span class="">Trang 1 </span>
+                </a>
+            </li>
+
+            <li class="{{#ifEqual path.name 'trangmau2'}} active {{/ifEqual}}">
+                <a href="trangmau2.html">
+                    <span class="">Trang 2</span>
+                </a>
+            </li>
+
+            <li class="{{#ifEqual path.name 'trangmau3'}} active {{/ifEqual}}">
+                <a href="trangmau3.html">
+                    <span class="">Trang 3</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </div>
+</div>
+{{/ifEqual}}

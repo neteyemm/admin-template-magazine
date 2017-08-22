@@ -1,0 +1,223 @@
+{{#extend "default"}} {{#content "main"}}
+<br>
+<div class="container-fluid container-fixed-lg">
+    <!-- BEGIN PlACE PAGE CONTENT HERE -->
+    <!-- END PLACE PAGE CONTENT HERE -->
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="page-title m-t-15">
+                {{title}}
+                <button class="btn btn-default btn-sm m-b-10 m-l-20 m-t-5 text-primary" type="button" data-toggle="modal" data-target="#modalTaoMoiYeuCauGiamDinh"><i class="fa fa-file"></i> Tạo mới yêu cầu giám định</button>
+            </h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <ul class="nav nav-tabs nav-tabs-simple nav-tabs-primary " role="tablist" data-init-reponsive-tabs="collapse">
+                    <li class="active"><a href="#tabDanhSach" data-toggle="tab" role="tab">Danh sách</a>
+                    </li>
+
+                    <li><a href="#tabTraVe" data-toggle="tab" role="tab">Trả về</a>
+                    </li>
+
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tabDanhSach">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form role="form" lpformnum="2" class="form-filter">
+                                    <div class="form-group">
+                                        <label>Đối tác yêu cầu</label>
+                                        <select class="full-width" data-init-plugin="select2">
+                                            <option value="">ABC</option>
+                                            <option value="">ABC</option>
+                                            <option value="">ABC</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">NGÀY</label>
+                                        <div id="datepicker-component" class="input-group date">
+                                            <input type="text" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phòng ban</label>
+                                        <select class="full-width" data-init-plugin="select2">
+                                            <option value="">Phòng năng lượng</option>
+                                         </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-cons m-t-25" type="button"><i class="fa fa-search"></i> Tìm kiếm
+                            </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <div class="clearfix">
+                                        <div class="pull-right m-t-25">
+                                            <span class="pull-left m-t-10 m-r-5"><b>1 - 100</b> trong tổng số <b>1412</b></span>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
+                                                <button type="button" class="btn btn-default"><i class="fa fa-chevron-right"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>STT</th>
+                                                <th>Mã đối tác</th>
+                                                <th>Đối tác yêu cầu</th>
+                                                <th>Phòng ban</th>
+                                                <th>Người yêu cầu</th>
+                                                <th>Thời gian</th>
+                                                <th>Địa điểm giám định</th>
+                                                <th>Chi tiết</th>
+                                                <th>Hành động</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="v-align-middle">1</td>
+                                                <td class="v-align-middle">001</td>
+                                                <td class="v-align-middle">Petro</td>
+                                                <td class="v-align-middle">Phòng Năng lượng</td>
+                                                <td class="v-align-middle">Nguyễn An</td>
+                                                <td class="v-align-middle">12/03/2017</td>
+                                                <td class="v-align-middle">Vũng tàu</td>
+                                                <td class="v-align-middle">
+                                                    <a href="" class="text-primary" data-toggle="modal" data-target="#modalChiTietYeuCauGiamDinh"><i class="fa fa-info-circle"></i> Xem</a>
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <div class="btn-group sm-m-t-10">
+                                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaYeuCauGiamDinh"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                                        <button type="button" class="btn btn-default btn-sm text-danger" data-toggle="modal" data-target="#modalXoa"><i class="fa fa-trash-o"></i> Xóa</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="v-align-middle">2</td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="v-align-middle">3</td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                                <td class="v-align-middle"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    {{>pagination}}
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane" id="tabTraVe">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form role="form" lpformnum="2" class="form-filter">
+
+                                    <div class="form-group long">
+                                        <label>THEO NGÀY</label>
+                                        <div class="input-daterange input-group" id="datepicker-range">
+                                            <input type="text" class="input form-control" name="start" />
+                                            <span class="input-group-addon">đến</span>
+                                            <input type="text" class="input form-control" name="end" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Đối tác yêu cầu</label>
+                                        <select class="full-width" data-init-plugin="select2">
+                                            <option value="">ABC</option>
+                                            <option value="">ABC</option>
+                                            <option value="">ABC</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-cons m-t-25" type="button"><i class="fa fa-search"></i> Tìm kiếm</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <div class="clearfix">
+                                        <div class="pull-right m-t-25">
+                                            <span class="pull-left m-t-10 m-r-5"><b>1 - 100</b> trong tổng số <b>1412</b></span>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
+                                                <button type="button" class="btn btn-default"><i class="fa fa-chevron-right"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>STT</th>
+                                                <th>Mã đối tác</th>
+                                                <th>Đối tác yêu cầu</th>
+                                                <th>Người yêu cầu</th>
+                                                <th>Thời gian trả về</th>
+                                                <th>Người hủy</th>
+                                                <th>Lý do</th>
+                                                <th>Hành động</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="v-align-middle">1</td>
+                                                <td class="v-align-middle">001</td>
+                                                <td class="v-align-middle">Petro</td>
+                                                <td class="v-align-middle">Nguyễn An</td>
+                                                <td class="v-align-middle">12/03/2017</td>
+                                                <td class="v-align-middle">Nguyễn Bình</td>
+                                                <td class="v-align-middle">
+                                                    <a href="" class="text-primary" data-toggle="modal" data-target="#modalYeuCauGiamDinh-LyDoTraVe"><i class="fa fa-info-circle"></i> Xem</a>
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <div class="btn-group sm-m-t-10">
+                                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaYeuCauGiamDinh"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalXacNhan"><i class="fa fa-reply"></i> Gửi lại yêu cầu giám định</button>
+                                                        <button type="button" class="btn btn-default btn-sm text-danger" data-toggle="modal" data-target="#modalXoa"><i class="fa fa-trash-o"></i> Xóa</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    {{>pagination}}
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/content}} {{#content "script" mode="append"}} {{/content}} {{/extend}}

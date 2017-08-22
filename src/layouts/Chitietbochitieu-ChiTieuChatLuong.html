@@ -1,0 +1,158 @@
+{{#extend "default"}} {{#content "main"}}
+<br>
+<div class="container-fluid container-fixed-lg">
+    <!-- BEGIN PlACE PAGE CONTENT HERE -->
+    <!-- END PLACE PAGE CONTENT HERE -->
+    <div class="row">
+        <div class="col-sm-7">
+            <h3 class="page-title">Chi tiết bộ chỉ tiêu
+                <button class="btn btn-default btn-sm m-b-10 m-l-20 m-t-5 text-primary" type="button" data-toggle="modal" data-target="#modalThemMoiChiTietChiTieu"><i class="fa fa-file"></i> Thêm mới chi tiết chỉ tiêu
+                </button>
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Bộ chỉ tiêu </label>
+                        <input type="email" disabled placeholder="DO" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Ngày tạo </label>
+                        <div id="datepicker-component" class="input-group date">
+                            <input type="text" disabled class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Tên chi tiết chỉ tiêu </label>
+                        <input type="email" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-cons m-t-25" type="button"><i class="fa fa-plus"></i> Tìm kiếm</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="panel-heading">
+                    <div class="pull-right m-b-10">
+                        <span class="pull-left m-t-10 m-r-5"><b>1 - 100</b> trong tổng số <b>1412</b></span>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
+                            <button type="button" class="btn btn-default"><i class="fa fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="width:20%">STT</th>
+                                <th style="width:20%">Test (Các chỉ tiêu)</th>
+                                <th style="width:20%">Unit (Đơn vị)</th>
+                                <th style="width:20%">EURO</th>
+                                <th style="width:20%"> Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="v-align-middle">1</td>
+                                <td class="v-align-middle">Appearance</td>
+                                <td class="v-align-middle">
+
+                                </td>
+                                <td class="v-align-middle">
+                                    trong,sạch
+                                </td>
+                                <td class="v-align-middle">
+                                    <div class="btn-group sm-m-t-10">
+
+                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaChiTieu"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                        <button type="button" class="btn btn-default btn-sm text-danger" data-toggle="modal" data-target="#modalXoa"><i class="fa fa-trash-o"></i> Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="v-align-middle">2</td>
+                                <td class="v-align-middle">Density at 15 &deg; C</td>
+                                <td class="v-align-middle">
+                                    kg/l
+                                </td>
+                                <td class="v-align-middle">
+
+                                </td>
+                                <td class="v-align-middle">
+                                    <div class="btn-group sm-m-t-10">
+                                        <!--<button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#"><i class="fa fa-plus"></i> Thêm mới</button>-->
+                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaChiTieu"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                        <button type="button" class="btn btn-default btn-sm text-danger" data-toggle="modal" data-target="#modalXoa"><i class="fa fa-trash-o"></i> Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="v-align-middle">3</td>
+                                <td class="v-align-middle">Distillation IBP</td>
+                                <td class="v-align-middle">
+                                    &deg;C
+                                </td>
+                                <td class="v-align-middle">
+                                    Báo cáo
+                                </td>
+                                <td class="v-align-middle">
+                                    <div class="btn-group sm-m-t-10">
+                                        <!--<button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#"><i class="fa fa-plus"></i> Thêm mới</button>-->
+                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaChiTieu"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                        <button type="button" class="btn btn-default btn-sm text-danger" data-toggle="modal" data-target="#modalXoa"><i class="fa fa-trash-o"></i> Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="v-align-middle">4</td>
+                                <td class="v-align-middle">Aromatic content</td>
+                                <td class="v-align-middle">
+                                    ppm
+                                </td>
+                                <td class="v-align-middle">
+                                    max500
+                                </td>
+                                <td class="v-align-middle">
+                                    <div class="btn-group sm-m-t-10">
+                                        <!--<button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#"><i class="fa fa-plus"></i> Thêm mới</button>-->
+                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaChiTieu"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                        <button type="button" class="btn btn-default btn-sm text-danger" data-toggle="modal" data-target="#modalXoa"><i class="fa fa-trash-o"></i> Xóa</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    {{>pagination}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/content}} {{#content "script" mode="append"}} {{/content}} {{/extend}}

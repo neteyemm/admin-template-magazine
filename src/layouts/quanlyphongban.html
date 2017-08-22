@@ -1,0 +1,338 @@
+{{#extend "default"}} {{#content "main"}} {{> navHori type="quanlyphongban"}}
+<br>
+<div class="container-fluid container-fixed-lg">
+    <div class="row">
+        <div class="col-sm-8">
+            <h3 class="page-title">{{title}}</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <ul class="nav nav-tabs nav-tabs-simple nav-tabs-primary " role="tablist" data-init-reponsive-tabs="collapse">
+                    <li class="active"><a href="#tabPhongBan" data-toggle="tab" role="tab">Phòng ban</a>
+                    </li>
+                    <li><a href="#tabNhanVien" data-toggle="tab" role="tab">Nhân viên</a>
+                    </li>
+                    <li><a href="#tabNghiepVu" data-toggle="tab" role="tab">Nghiệp vụ</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tabPhongBan">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <button class="btn btn-default btn-sm m-b-10  m-t-5 text-primary" type="button" data-toggle="modal" data-target="#modalPhongBan"><i class="fa fa-file"></i> Tạo mới</button>
+                                <div class="pull-right m-b-10">
+                                    <span class="pull-left m-t-10 m-r-5"><b>1 - 100</b> trong tổng số <b>1412</b></span>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
+                                        <button type="button" class="btn btn-default"><i class="fa fa-chevron-right"></i></button>
+                                    </div>
+                                </div>
+                                <div class=" table table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>STT</th>
+                                                <th>Tên phòng ban</th>
+                                                <th>Mã phòng ban</th>
+                                                <th>Chi tiết</th>
+                                                <th>Hành động</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="v-align-middle">
+                                                    1
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    Phòng năng lượng
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    123QWE
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <a href="" class="text-primary" data-toggle="modal" data-target="#modalXemPhongBan"><i class="fa fa-user-circle-o"></i> Xem</a>
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <div class="btn-group sm-m-t-10">
+                                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaPhongBan"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                                        <button type="button" class="btn btn-default btn-sm text-danger" data-toggle="modal" data-target="#modalXoa"><i class="fa fa-trash-o"></i> Xóa</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="v-align-middle">
+                                                    2
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    Phòng hàng hải
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    123QWE
+                                                </td>
+
+                                                <td class="v-align-middle">
+                                                    <a href="" class="text-primary" data-toggle="modal" data-target="#modalXemPhongBan"><i class="fa fa-user-circle-o"></i> Xem</a>
+                                                </td>
+
+                                                <td class="v-align-middle">
+
+                                                    <div class="btn-group sm-m-t-10">
+                                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalPhongBan"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                                        <button type="button" class="btn btn-default btn-sm text-danger" data-toggle="modal" data-target="#modalXoa"><i class="fa fa-trash-o"></i> Xóa</button>
+                                                    </div>
+
+
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    {{>pagination}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="tabNhanVien">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <h5 class="m-t-0">
+                                    Tìm kiếm
+                                </h5>
+                                <form role="form" lpformnum="2" class="form-filter">
+                                    <div class="form-group">
+                                        <label>Phòng ban</label>
+
+                                        <select class="full-width" data-init-plugin="select2" data-placeholder="">
+                                            <option value=""></option>
+                                            <option value="AK">Phòng năng lượng</option>
+                                            <option value="AK">Phòng hàng hải</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Tên nhân viên</label>
+                                        <input type="text" class="form-control " name="" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Mã nhân viên</label>
+                                        <input type="text" class="form-control " name="" value="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-cons m-t-25" type="button"><i class="fa fa-search"></i> Tìm kiếm</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <button class="btn btn-default btn-sm   text-primary" type="button" data-toggle="modal" data-target="#modalThemNhanVien"><i class="fa fa-user-plus"></i> Thêm nhân viên</button>
+                                <div class="pull-right m-b-10">
+                                    <span class="pull-left m-t-10 m-r-5"><b>1 - 100</b> trong tổng số <b>1412</b></span>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default"><i class="fa fa-chevron-left"></i></button>
+                                        <button type="button" class="btn btn-default"><i class="fa fa-chevron-right"></i></button>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>STT</th>
+                                                <th>Tên nhân viên</th>
+                                                <th>Mã nhân viên</th>
+                                                <th>Chức vụ</th>
+                                                <th>Chi tiết</th>
+                                                <th>Hành động</th>
+                                                <th>Trạng thái</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+
+                                                <td class="v-align-middle">
+                                                    1
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    Nguyen Van A
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    123QWE
+                                                </td>
+
+                                                <td class="v-align-middle">
+                                                    Trưởng phòng
+                                                </td>
+
+                                                <td class="v-align-middle">
+                                                    <a href="" class="text-primary" data-toggle="modal" data-target="#modalHoSoNhanVien"><i class="fa fa-user-circle-o"></i> Xem</a>
+                                                </td>
+
+                                                <td class="v-align-middle">
+                                                    <div class="btn-group sm-m-t-10">
+                                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaNhanVien"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChuyenPhongBan"><i class="fa fa-edit"></i> Chuyển phòng ban</button>
+                                                        <button type="button" class="btn btn-default btn-sm text-danger" data-toggle="modal" data-target="#modalXoa"><i class="fa fa-trash-o"></i> Xóa</button>
+                                                    </div>
+                                                </td>
+
+                                                <td class="v-align-middle">
+                                                    <input type="checkbox" data-init-plugin="switchery" data-size="small" data-color="primary" checked="checked" />
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    {{>pagination}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="tabNghiepVu">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form role="form" lpformnum="2" class="form-filter">
+                                    <div class="form-group">
+                                        <label>Tên nghiệp vụ</label>
+                                        <input type="email" class="form-control input-sm">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Mã nghiệp vụ</label>
+                                        <input type="email" class="form-control input-sm">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Trạng thái</label>
+                                        <select class="full-width" data-init-plugin="select2">
+                                            <option value="">Còn hiện hành</option>
+                                            <option value="">Đã huỷ</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-cons m-t-25" type="button"><i class="fa fa-search"></i> Tìm kiếm</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="clearfix"></div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Phòng ban</th>
+                                                <th>Tên nghiệp vụ</th>
+                                                <th>Mã Nghiệp vụ</th>
+                                                <th>Ngày tạo</th>
+                                                <th>Trạng thái</th>
+                                                <th>Hành động</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2" class="v-align-middle">
+                                                    Phòng năng lượng
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    Giám định chất lượng
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    123QWE
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    20/05/2016
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <span class="label label-default">Còn hiện hành</span>
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <div class="btn-group sm-m-t-10">
+                                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaNghiepVu"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="v-align-middle">
+                                                    Giám định số lượng lượng
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    123QWER
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    20/05/2016
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <span class="label label-default">Còn hiện hành</span>
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <div class="btn-group sm-m-t-10">
+                                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaNghiepVu"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="2" class="v-align-middle">
+                                                    Phòng hàng hải
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    Giám định chất lượng
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    123QWE
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    20/05/2016
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <span class="label label-default">Còn hiện hành</span>
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <div class="btn-group sm-m-t-10">
+                                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaNghiepVu"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="v-align-middle">
+                                                    Giám định số lượng lượng
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    123QWER
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    20/05/2016
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <span class="label label-danger">Đã huỷ</span>
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <div class="btn-group sm-m-t-10">
+                                                        <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaNghiepVu"><i class="fa fa-edit"></i> Chỉnh sữa</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/content}} {{#content "script" mode="append"}} {{/content}} {{/extend}}

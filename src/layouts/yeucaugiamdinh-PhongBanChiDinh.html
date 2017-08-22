@@ -1,0 +1,188 @@
+{{#extend "default"}} {{#content "main"}}
+<br>
+<!-- START CONTAINER FLUID -->
+<div class="container-fluid container-fixed-lg">
+    <!-- BEGIN PlACE PAGE CONTENT HERE -->
+    <!-- END PLACE PAGE CONTENT HERE -->
+    <div class="row">
+        <div class="col-sm-8">
+            <h3 class="page-title">{{title}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <ul class="nav nav-tabs nav-tabs-simple nav-tabs-primary " role="tablist" data-init-reponsive-tabs="collapse">
+                    <li class="active"><a href="#tabChuaChiDinh" data-toggle="tab" role="tab">Chưa chỉ định</a>
+                    </li>
+                    <li class=""><a href="#tabDaChiDinh" data-toggle="tab" role="tab">Đã chỉ định</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tabChuaChiDinh">
+                        <div class="panel-body">
+
+                            {{> formSearch type="phongbanchidinh-chuachidinh"}}
+
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th style="width:5%">STT</th>
+                                        <th style="width:10%">Số chứng thư</th>
+                                        <th style="width:10%">Mã đối tác</th>
+                                        <th style="width:10%">Đối tác yêu cầu</th>
+                                        <th style="width:10%">Người yêu cầu</th>
+                                        <th style="width:10%">Hạng mục yêu cầu</th>
+                                        <th style="width:5%">Thời gian</th>
+                                        <th style="width:10%">Địa điểm giám định</th>
+                                        <th style="width:5%">Chi tiết</th>
+                                        <th style="width:25%">Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="v-align-middle">1</td>
+                                        <td class="v-align-middle"></td>
+                                        <td class="v-align-middle">001</td>
+                                        <td class="v-align-middle">Petro</td>
+                                        <td class="v-align-middle">Nguyễn An</td>
+                                        <td class="v-align-middle">Giám định số lượng</td>
+                                        <td class="v-align-middle">12/03/2017</td>
+                                        <td class="v-align-middle">Vũng tàu</td>
+                                        <td class="v-align-middle">
+                                            <a href="" class="text-primary" data-toggle="modal" data-target="#modalChiTietYeuCauGiamDinh"><i class="fa fa-info-circle"></i> Xem</a>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <div class="btn-group sm-m-t-10">
+                                                <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChapNhan"><i class="fa fa-check"></i> Chấp nhận</button>
+                                                <button type="button" class="btn btn-default btn-sm text-danger" data-toggle="modal" data-target="#modalTuChoi"><i class="fa fa-trash-o"></i> Từ chối</button>
+                                                <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaYeuCauGiamDinh"><i class="fa fa-edit"></i> Sửa</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="v-align-middle">2</td>
+                                        <td class="v-align-middle">2123qwe</td>
+                                        <td class="v-align-middle">002</td>
+                                        <td class="v-align-middle">Petro</td>
+                                        <td class="v-align-middle">Nguyễn An</td>
+                                        <td class="v-align-middle">Giám định chất lượng</td>
+                                        <td class="v-align-middle">12/03/2017</td>
+                                        <td class="v-align-middle">Vũng tàu</td>
+                                        <td class="v-align-middle">
+                                            <a href="" class="text-primary" data-toggle="modal" data-target="#modalChiTietYeuCauGiamDinh"><i class="fa fa-info-circle"></i> Xem</a>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <div class="btn-group sm-m-t-10">
+                                                <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChiDinhGDV"><i class="fa fa-edit"></i> Chỉ định GĐV</button>
+                                                <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChinhSuaYeuCauGiamDinh"><i class="fa fa-edit"></i> Sửa</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            {{>pagination}}
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane " id="tabDaChiDinh">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <form role="form" lpformnum="2" class="form-filter">
+                                        <div class="form-group">
+                                            <label>Đối tác</label>
+                                            <select class="full-width select2-hidden-accessible" data-init-plugin="select2" tabindex="-1" aria-hidden="true">
+                                                <option value="">Đối tác</option>
+                                                <option value="">ABC</option>
+                                                <option value="">ABC</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group long">
+                                            <label>THEO NGÀY</label>
+                                            <div class="input-daterange input-group" id="datepicker-range">
+                                                <input type="text" class="input form-control" name="start" />
+                                                <span class="input-group-addon">đến</span>
+                                                <input type="text" class="input form-control" name="end" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary btn-cons m-t-25" type="button"><i class="fa fa-search"></i> Tìm kiếm</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Số chứng thư</th>
+                                        <th>Mã đối tác</th>
+                                        <th>Đối tác yêu cầu</th>
+                                        <th>Người yêu cầu</th>
+                                        <th>Hạng mục yêu cầu</th>
+                                        <th>Giám định viên</th>
+                                        <th>Thời gian</th>
+                                        <th>Địa điểm giám định</th>
+                                        <th>Trạng thái</th>
+                                        <th>Chi tết</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="v-align-middle">1</td>
+                                        <td class="v-align-middle">125489qqwe</td>
+                                        <td class="v-align-middle">123</td>
+                                        <td class="v-align-middle">ABC</td>
+                                        <td class="v-align-middle">Nguyễn An</td>
+                                        <td class="v-align-middle">Giám định số lượng</td>
+                                        <td class="v-align-middle">Nguyễn Văn A</td>
+                                        <td class="v-align-middle">20/06/2017</td>
+                                        <td class="v-align-middle">Vũng Tàu</td>
+                                        <td class="v-align-middle">Đang giám định</td>
+                                        <td class="v-align-middle">
+                                            <a href="" class="text-primary" data-toggle="modal" data-target="#modalChiTietCongViec"><i class="fa fa-info-circle"></i> Xem</a>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <div class="btn-group sm-m-t-10">
+                                                <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChiDinhGDV"><i class="fa fa-edit"></i> Thêm GĐV</button>
+                                                <button type="button" class="btn btn-default btn-sm text-danger" data-toggle="modal" data-target="#modalXoa"><i class="fa fa-trash-o"></i> Xóa</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="v-align-middle">2</td>
+                                        <td class="v-align-middle">125489qqwe</td>
+                                        <td class="v-align-middle">321</td>
+                                        <td class="v-align-middle">OCB</td>
+                                        <td class="v-align-middle">Nguyễn An</td>
+                                        <td class="v-align-middle">Giám định chất lượng</td>
+                                        <td class="v-align-middle">Nguyễn Văn A</td>
+                                        <td class="v-align-middle">30/06/2017</td>
+                                        <td class="v-align-middle">Dung Quất</td>
+                                        <td class="v-align-middle">Hoàn thành giám định</td>
+                                        <td class="v-align-middle">
+                                            <a href="" class="text-primary" data-toggle="modal" data-target="#modalChiTietCongViec"><i class="fa fa-info-circle"></i> Xem</a>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <div class="btn-group sm-m-t-10">
+                                                <button type="button" class="btn btn-default btn-sm text-primary" data-toggle="modal" data-target="#modalChiDinhGDV"><i class="fa fa-edit"></i> Thêm GĐV</button>
+                                                <button type="button" class="btn btn-default btn-sm text-danger" data-toggle="modal" data-target="#modalXoa"><i class="fa fa-trash-o"></i> Xóa</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            {{>pagination}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/content}} {{#content "script" mode="append"}} {{/content}} {{/extend}}

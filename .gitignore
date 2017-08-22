@@ -1,0 +1,10 @@
+npm-debug.log
+
+*.swp
+.vscode
+.idea
+ghpages/
+.publish
+bower_components/
+node_modules/
+/dist
